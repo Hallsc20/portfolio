@@ -7,20 +7,21 @@ import { ArrowLink } from "@/components/ui/ArrowLink";
  */
 export function AboutHero() {
   return (
-    <section className="mb-16 bg-gradient-to-b from-ink/0 to-night max-lg:mb-0">
+    <section className="bg-gradient-to-b from-ink/0 to-night">
       <div className="page-padding">
         <div className="mx-auto max-w-page">
           <div className="grid grid-cols-2 gap-x-16 pt-40 pb-36 max-lg:grid-cols-1 max-lg:gap-y-16 max-lg:pb-24 max-md:pt-32 max-md:pb-16">
             <div className="self-start lg:sticky lg:top-32">
               <div className="mb-stack-md">
-                <h1 className="heading-xlarge">Learning web development on real projects</h1>
+                {/* In two columns "development" must fit its column: shrink with the window, up to the usual size. */}
+                <h1 className="heading-xlarge lg:text-[length:min(4.5rem,5.6vw)]">Learning web development on real projects</h1>
               </div>
               <p className="text-size-large max-w-[30rem]">
                 Hi, I&apos;m Charlie, a Web Development student at Leicester College and a Junior Developer Intern at
                 Lune Studio.
               </p>
             </div>
-            <div className="mx-auto flex w-full max-w-[30rem] flex-col gap-14 lg:pt-4 max-md:gap-10 max-sm:gap-8">
+            <div className="mx-auto flex w-full max-w-[30rem] flex-col gap-14 lg:pt-4 max-lg:mx-0 max-md:gap-10 max-sm:gap-8">
               <div className="text-eyebrow">My story</div>
               <div className="flex flex-col gap-6 max-md:gap-5">
                 <h2 className="heading-medium tracking-[-0.01rem]">What I&apos;m working on right now</h2>

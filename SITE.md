@@ -46,6 +46,8 @@ This site is being **rebuilt in code from the existing Webflow site** (charlie-h
 - 2026-10-15: Added the Oakfield Signs & Graphics website (your Lune Studio work-experience brief) as a project, in a new "Web design" category. Its photos are screenshots of the Oakfield site from your oakfield project folder. It's first on the Work page and on the homepage, which now shows your two newest projects (Oakfield, CMS & Filtering).
 - 2026-10-15: The Oakfield project page now says plainly that it was a fake brief: headline "A full website for a made-up sign maker, from a practice brief", Client "Fictional business (practice brief)", and the introduction opens "Oakfield is not a real company".
 - 2026-11-05: Put the site on GitHub (https://github.com/Hallsc20/portfolio) and published it at https://hallsc20.github.io/portfolio/. Pushing changes to GitHub updates the live site by itself. The Ship Studio preview works as before. On the live site, photos are served at their original size because GitHub Pages can't resize them. The site asks search engines not to list it until you're ready to launch.
+- 2026-11-05: Fixed two spacing problems on the About page. On tablets and phones, "My story" now lines up with the headline instead of being indented. On desktop, the darker stripe above the footer is gone.
+- 2026-11-05: Fixed the About headline running into the second column on small desktop and laptop windows (about 992–1250px wide). The headline now shrinks just enough to fit there, and is the usual size on larger screens.
 
 ## Where the Site Lives
 - **Live site:** https://hallsc20.github.io/portfolio/
