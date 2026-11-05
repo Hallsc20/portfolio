@@ -45,12 +45,13 @@ This site is being **rebuilt in code from the existing Webflow site** (charlie-h
 - 2026-10-15: The footer email now shrinks to fit on tablets and phones (it used to run off the edge on phones, as it did on the Webflow site).
 - 2026-10-15: Added the Oakfield Signs & Graphics website (your Lune Studio work-experience brief) as a project, in a new "Web design" category. Its photos are screenshots of the Oakfield site from your oakfield project folder. It's first on the Work page and on the homepage, which now shows your two newest projects (Oakfield, CMS & Filtering).
 - 2026-10-15: The Oakfield project page now says plainly that it was a fake brief: headline "A full website for a made-up sign maker, from a practice brief", Client "Fictional business (practice brief)", and the introduction opens "Oakfield is not a real company".
-- 2026-11-05: Put the site on GitHub (https://github.com/Hallsc20/portfolio) and published it at https://hallsc20.github.io/portfolio/. Pushing changes to GitHub updates the live site by itself. The Ship Studio preview works as before. On the live site, photos are served at their original size because GitHub Pages can't resize them.
+- 2026-11-05: Put the site on GitHub (https://github.com/Hallsc20/portfolio) and published it at https://hallsc20.github.io/portfolio/. Pushing changes to GitHub updates the live site by itself. The Ship Studio preview works as before. On the live site, photos are served at their original size because GitHub Pages can't resize them. The site asks search engines not to list it until you're ready to launch.
 
 ## Where the Site Lives
 - **Live site:** https://hallsc20.github.io/portfolio/
 - **Code:** https://github.com/Hallsc20/portfolio (public, so anyone can read it)
 - **To update the live site:** ask Claude to push your changes to GitHub. It rebuilds and goes live a couple of minutes later.
+- **Hidden from search engines:** the site is a draft for now, so it asks Google and others not to list it. Anyone with the link can still open it. When you're ready to launch, ask Claude to remove the "robots" line from `app/layout.tsx`.
 - **Pictures:** if you add a plain picture (not one using the site's usual image component), its address needs the `/portfolio` folder in front. Claude handles this.
 
 ## How to Customize

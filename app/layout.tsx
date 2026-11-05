@@ -24,6 +24,9 @@ const jakarta = localFont({
 // Each page sets its own title and link-preview tags (see content/metadata.ts).
 export const metadata: Metadata = {
   title: "Charlie Halls | Junior Web Developer in Leicester",
+  // Draft site: tells Google and other search engines not to list it.
+  // Delete this line when the site is ready to launch.
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
