@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/*
+ * Design system — taken from the computed values of charlie-halls.webflow.io.
+ * Everything is sized in rem, and the root font size is fluid (see `html` below),
+ * so the whole site scales with the window exactly as the original does.
+ *
+ * The original is built desktop-first, so styles step DOWN at each breakpoint:
+ *   max-lg:  ≤ 991px (tablet)   max-md: ≤ 767px (phone landscape)   max-sm: ≤ 479px (phone)
+ */
+
+@theme {
+  /* Breakpoints (from the original's media queries) */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1441px;
+  --breakpoint-2xl: 1921px;
+
+  /* Colour, by role */
+  --color-ink: #0f1316; /* page background */
+  --color-night: #12171b; /* footer, bottom of section gradients */
+  --color-line: #1a242c; /* borders, button outlines, arrow circles */
+  --color-slate: #617481; /* button outline on hover */
+  --color-dim: #627275; /* form field focus */
+  --color-azure: #5ccdfd; /* Lune Studio blue — contact submit button */
+  --color-panel: #141a1f; /* phone menu panel (the template's own menu colour) */
+  --color-shade: #070a0c; /* dimmed page behind the phone menu */
+  --color-white: #fff;
+
+  /* Type */
+  --font-sans: var(--font-jakarta), sans-serif;
+
+  /* Layout */
+  --container-page: 94rem; /* .container-large */
+  --container-hero: 50rem;
+  --container-medium: 32rem;
+  --container-small: 20rem;
+
+  /* Motion (Webflow easings used on the original) */
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Whole page fades in after load (original: 500ms pause, 400ms fade) */
+  --animate-page-in: page-in 400ms 500ms both;
+  @keyframes page-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+/* ---------- Base ---------- */
+
+@layer base {
+  /* Fluid root size — copied exactly from the original's global embed. */
+  html {
+    font-size: calc(0.625rem + 0.41666666666666663vw);
+  }
+  @media screen and (max-width: 1920px) {
+    html {
+      font-size: calc(0.625rem + 0.41666666666666674vw);
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    html {
+      font-size: calc(0.8126951092611863rem + 0.20811654526534862vw);
+    }
+  }
+  @media screen and (max-width: 479px) {
+    html {
+      font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+    }
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.01rem;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01rem;
+  }
+  /* Plain (unstyled) headings step down on phones; every styled heading overrides these. */
+  @media (width < 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+  }
+
+  p {
+    color: rgb(255 255 255 / 0.85);
+  }
+}
+
+/* ---------- Type scale (each carries its own breakpoint steps) ---------- */
+
+@utility heading-xlarge {
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  @media (width < 992px) { font-size: 3.5rem; }
+  @media (width < 768px) { font-size: 2.875rem; }
+  @media (width < 480px) { font-size: 2.75rem; }
+}
+
+@utility heading-large {
+  font-size: 3.25rem;
+  font-weight: 500;
+  line-height: 1.45;
+  @media (width < 992px) { font-size: 3rem; }
+  @media (width < 768px) { font-size: 2.5rem; }
+}
+
+@utility heading-medium {
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.35;
+  @media (width < 992px) { font-size: 2.25rem; }
+  @media (width < 768px) { font-size: 2rem; }
+}
+
+@utility heading-small {
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  @media (width < 768px) { font-size: 1.25rem; }
+}
+
+/* Large centred statement paragraph ("About me" on the homepage) */
+@utility text-statement {
+  font-size: 3rem;
+  line-height: 1.5;
+  @media (width < 992px) { font-size: 2.5rem; }
+  @media (width < 768px) { font-size: 2.25rem; }
+  @media (width < 480px) { font-size: 2rem; }
+}
+
+@utility text-size-xlarge {
+  font-size: 2.25rem;
+  @media (width < 768px) { font-size: 2rem; }
+  @media (width < 480px) { font-size: 1.75rem; }
+}
+
+@utility text-size-large {
+  font-size: 1.75rem;
+  @media (width < 768px) { font-size: 1.5rem; }
+}
+
+@utility text-size-regular {
+  font-size: 1.25rem;
+  line-height: 1.65;
+}
+
+@utility text-size-medium {
+  font-size: 1.25rem;
+}
+
+@utility text-size-small {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Small uppercase label ("ABOUT ME - CHARLIE HALLS") */
+@utility text-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Footer email address. Steps down so it fits on one line on smaller screens — the
+   sizes the template's styles intended (on the original a fixed 4rem overrode them, so
+   the address ran off the edge on phones; fixed 2026-10-15). */
+@utility text-email {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: -0.01rem;
+  @media (width < 992px) { font-size: 3rem; }
+  @media (width < 768px) { font-size: 2.25rem; }
+  @media (width < 480px) { font-size: 1.5rem; }
+}
+
+/* ---------- Layout ---------- */
+
+/*
+ * Page gutter. Note the original's quirk: the padded box is capped at 93vw, so the
+ * right-hand gap (14vw) is twice the left one (7vw) on desktop. Kept on purpose.
+ */
+@utility page-padding {
+  width: 100%;
+  max-width: 93vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  @media (width < 992px) { max-width: none; padding-left: 3rem; padding-right: 3rem; }
+  @media (width < 768px) { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+/* Vertical section rhythm (.padding-xhuge / .padding-xxhuge) */
+@utility py-section {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  @media (width < 992px) { padding-top: 6rem; padding-bottom: 6rem; }
+  @media (width < 768px) { padding-top: 4rem; padding-bottom: 4rem; }
+}
+@utility pt-section {
+  padding-top: 9rem;
+  @media (width < 992px) { padding-top: 6rem; }
+  @media (width < 768px) { padding-top: 4rem; }
+}
+@utility py-section-xl {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  @media (width < 992px) { padding-top: 8rem; padding-bottom: 8rem; }
+  @media (width < 768px) { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+}
+
+/* ---------- Scroll-linked motion (driven by --p from <ScrollProgress>) ---------- */
+
+/* Homepage hero photo strip: slides right by a third of its width. */
+@utility slide-strip {
+  transform: translateX(calc(var(--p, 0) * 33.33%));
+}
+
+/* Photos in cards drift −7% → 7% as they pass, at 1.1× so no edge shows. */
+@utility parallax-card {
+  transform: translateY(calc(var(--p, 0.5) * 14% - 7%)) scale(1.1);
+}
+
+/* Full-width background photos drift −10% → 10%. */
+@utility parallax-section {
+  transform: translateY(calc(var(--p, 0.5) * 20% - 10%)) scale(1.1);
+}
+
+/* About page "My story" text sinks by up to 35% of its height as you scroll past. */
+@utility drift-down {
+  transform: translateY(calc(var(--p, 0) * 35%));
+}
+
+/* Homepage "offer" cards: rise from 20% to −25% of their height, fading in over the
+   first 20% of the scroll and out between 50% and 70%. Desktop and tablet only (≥768px),
+   as on the original — on phones the cards simply sit still. */
+@utility scroll-rise-fade {
+  @media (width >= 768px) {
+    transform: translateY(calc(20% - var(--p, 0) * 45%));
+    opacity: clamp(0, min(var(--p, 0) * 5, (0.7 - var(--p, 0)) * 5), 1);
+  }
+}
+
+/* Stack spacing (.margin-small / .margin-medium / .margin-large, bottom only) */
+@utility mb-stack-sm {
+  margin-bottom: 1rem;
+}
+@utility mb-stack-md {
+  margin-bottom: 2.5rem;
+  @media (width < 992px) { margin-bottom: 1.5rem; }
+  @media (width < 768px) { margin-bottom: 1.25rem; }
+}
+@utility mb-stack-lg {
+  margin-bottom: 3.25rem;
+  @media (width < 992px) { margin-bottom: 2.5rem; }
+  @media (width < 768px) { margin-bottom: 1.5rem; }
+}

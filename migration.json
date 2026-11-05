@@ -1,0 +1,110 @@
+{
+  "source": "https://charlie-halls.webflow.io/",
+  "target": "Next.js 16 + Tailwind CSS 4 (this project)",
+  "breakpoints": [
+    1920,
+    1440,
+    1200,
+    991,
+    767,
+    390
+  ],
+  "phases": [
+    {
+      "id": 0,
+      "name": "Survey",
+      "status": "done"
+    },
+    {
+      "id": 1,
+      "name": "Design system",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "name": "Homepage",
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "name": "Other templates",
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "name": "Remainder",
+      "status": "done"
+    }
+  ],
+  "doing": "",
+  "done": [
+    "Survey: 21 pages grouped into 6 templates + 1 unlinked leftover page (see MIGRATION.md)",
+    "Measurement loop proven: starter page vs original homepage at 1440px = 5.66% (baseline)",
+    "Design system: colours, Plus Jakarta Sans (self-hosted), fluid type scale, spacing, breakpoints, motion values; Button / ArrowLink / Tag components; /style-guide page; recorded in CLAUDE.md \"Visual language\". Type sizes verified equal to the original at 1920/1440/991/390.",
+    "Homepage: built from the design system; worst width 99.56% (all six widths 99.56–99.94%, heights identical); hover, keyboard, links, headings and top-bar behaviour checked against the original.",
+    "Project template (10 pages): worst 99.08%; greenpoint verified at all six widths (99.56% worst). Homepage regression check: unchanged.",
+    "About: worst 98.65% (sub-pixel text in the moving \"My story\" block); regressions on homepage and project page unchanged.",
+    "Work (99.70% worst) and Category pages (99.74% worst); regressions unchanged.",
+    "Contact (99.29% worst) and Page Not Found (100%).",
+    "Icons and link-preview tags carried over; production build passes; no console errors on any page.",
+    "Phase 4: remainder written up in MIGRATION.md.",
+    "After the migration: phone/tablet menu added (2026-10-15).",
+    "Template leftovers tidied (2026-10-15): sample projects and empty categories removed; About rewritten from real facts; footer, booking link, titles, typos, headings, link previews, form focus outline, 404 style fixed.",
+    "Stock portraits removed from About and Contact (2026-10-15); pages relaid as two text columns.",
+    "Footer email fits on phones (2026-10-15)."
+  ],
+  "notDone": [
+    "Contact form is not connected until a Formspree form ID is added (content/site.ts).",
+    "Publishing / hosting the new site (the Webflow site is untouched).",
+    "Template stock photos still in use on the homepage, Work page and project banners — need your own photos."
+  ],
+  "needsYou": [
+    {
+      "id": "content",
+      "question": "Where should the projects (10) and categories (4) live?",
+      "recommendation": "Files in this project (one data file per collection). The collections are small, it needs no accounts, and I can move it to a CMS (Sanity) later without rebuilding the pages.",
+      "status": "answered",
+      "answer": "Files in the project."
+    },
+    {
+      "id": "forms",
+      "question": "Where should Contact form submissions go? The current Webflow form backend won't work outside Webflow.",
+      "recommendation": "Send them by email to charlie@lune-studio.co.uk through a free form service (Formspree). You create a free account and give me its form ID; until then the form is built but shows a message that it isn't connected yet.",
+      "status": "answered",
+      "answer": "Email via Formspree. Needs the Formspree form ID from you when we reach the Contact page."
+    },
+    {
+      "id": "leftovers",
+      "question": "The live site has template leftovers (sample About/project text, 'Booked TyCreated' page titles, typo 'I'lll', footer email link going to example@template.com). Copy them or fix them?",
+      "recommendation": "Copy everything exactly so the comparison is fair, except the footer email link, which is a plain bug (it emails a stranger's placeholder address). Fix the rest afterwards as a separate tidy-up.",
+      "status": "answered",
+      "answer": "Copy everything exactly, except fix the footer email link."
+    },
+    {
+      "id": "mobile-menu",
+      "question": "On tablets and phones the original has no menu at all. Match that, or add one?",
+      "recommendation": "Match the original during the migration, then add a simple mobile menu as the first follow-up, so phone visitors can reach About, Work and Contact.",
+      "status": "answered",
+      "answer": "Match the original now; add a phone menu as the first follow-up."
+    },
+    {
+      "id": "homepage-signoff",
+      "question": "Does the rebuilt homepage look and behave right to you? Its structure (sections, cards, motion) is reused on every other page.",
+      "recommendation": "Approve it so I can build the remaining 5 page types the same way.",
+      "status": "answered",
+      "answer": "Approved (\"Everything looks fine\")."
+    },
+    {
+      "id": "formspree-id",
+      "question": "Formspree form ID for the Contact page.",
+      "recommendation": "Create a free form at formspree.io sending to charlie@lune-studio.co.uk and send me its ID (or paste it into content/site.ts).",
+      "status": "deferred",
+      "answer": "Skipped for now (2026-10-15). Form stays unconnected and asks visitors to email instead."
+    }
+  ],
+  "decisions": {
+    "fonts": "Plus Jakarta Sans, self-hosted from the same open-licensed files the live site uses. No substitute needed.",
+    "old-home": "Not rebuilt: unlinked template leftover page.",
+    "webflow-badge": "Dropped (Webflow free-plan badge)."
+  }
+}
