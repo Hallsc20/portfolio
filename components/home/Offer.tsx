@@ -19,7 +19,7 @@ const steps: Step[] = [
     heading: "I’ll build your website for free.",
     body: "I’m now looking to build my portfolio by creating websites for small businesses completely free of charge — clients only cover hosting at cost.",
     link: { href: "/contact", label: "Claim your free website" },
-    image: "/images/image105-1-e4ef.jpg",
+    image: "/images/offer-free-website.jpg",
   },
   {
     id: "two",
@@ -39,7 +39,7 @@ const steps: Step[] = [
       </>
     ),
     link: { href: "https://www.lune-studio.co.uk", label: "Learn about Lune Studio" },
-    image: "/images/image156-1-e51d.jpg",
+    image: "/images/offer-code-and-phone.jpg",
   },
   {
     id: "three",

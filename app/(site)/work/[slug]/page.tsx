@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: Props) {
         heading="Want a website like this for your business?"
         body="I'm building websites for small businesses free of charge, with Lune Studio overseeing every project."
         button={{ href: "https://cal.com/lune-studio/free-website", label: "Apply for a free website", newTab: true }}
-        image="/images/image108-1.jpg"
+        image="/images/band-recent-work.jpg"
       />
       <NextProjects currentSlug={project.slug} />
     </>

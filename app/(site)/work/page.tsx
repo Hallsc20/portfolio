@@ -11,7 +11,7 @@ export default function WorkPage() {
   return (
     <>
       <WorksHero />
-      <PhotoBand image="/images/image108-1.jpg" />
+      <PhotoBand image="/images/band-recent-work.jpg" />
       <ProjectListing id="scroll" heading="All my projects" projects={projects} current="all" />
     </>
   );

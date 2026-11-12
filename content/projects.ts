@@ -50,37 +50,37 @@ export const projects: Project[] = [
     "slug": "oakfield-signs-and-graphics",
     "name": "Oakfield Signs & Graphics (Practise)",
     "category": "web-design",
-    "thumbnail": "/images/oakfield-card-v2.jpg",
+    "thumbnail": "/images/project-oak-card.jpg",
     "headline": "A full website for a made-up sign maker, from a practice brief",
     "client": "Fictional business (practice brief)",
     "service": "Website design and build",
     "year": "2026",
     "heroImages": [
-      "/images/oakfield-home.jpg",
-      "/images/oakfield-our-work.jpg"
+      "/images/project-oak-hero-a.jpg",
+      "/images/project-oak-hero-b.jpg"
     ],
     "introduction": "Oakfield is not a real company: this was a fake brief set by Lune Studio for my work experience. The job was a website for a made-up sign maker in Market Harborough, built to get local businesses to ring or email for a quote within a minute of landing.",
-    "bannerImage": "/images/oakfield-banner.jpg",
+    "bannerImage": "/images/project-oak-banner.jpg",
     "showcaseImages": [
       {
-        "src": "/images/oakfield-phone-home.jpg",
-        "width": 780,
-        "height": 1688
+        "src": "/images/project-oak-show-1.jpg",
+        "width": 1600,
+        "height": 1200
       },
       {
-        "src": "/images/oakfield-business-signs.jpg",
-        "width": 1440,
-        "height": 900
+        "src": "/images/project-oak-show-2.jpg",
+        "width": 1600,
+        "height": 1200
       },
       {
-        "src": "/images/oakfield-project-page.jpg",
-        "width": 1440,
-        "height": 900
+        "src": "/images/project-oak-show-3.jpg",
+        "width": 1600,
+        "height": 1200
       },
       {
-        "src": "/images/oakfield-contact.jpg",
-        "width": 1440,
-        "height": 900
+        "src": "/images/project-oak-show-4.jpg",
+        "width": 1600,
+        "height": 1200
       }
     ],
     "whatIDid": "I built the site from the brief: a homepage, separate pages for business signs, vehicle livery and sign manufacturing, a gallery of their work you can filter by type with a page for every job, plus About, Contact, a privacy page and a 404 page. I wrote the copy for the service tiles, sign groups, FAQs, van comparison table, team and portfolio, and gave every page its own title and Google description. The phone number and a quote form are within reach on every page, including on phones."
@@ -89,32 +89,32 @@ export const projects: Project[] = [
     "slug": "maple-grove-therapy-practise",
     "name": "Maple Grove Therapy (Practise)",
     "category": "prototyping",
-    "thumbnail": "/images/984a185b-8d7e-4371-9d03-a311f88af20f1.png",
+    "thumbnail": "/images/project-mg-card.jpg",
     "headline": "An Introductory Template to learn the basics of Webflow",
     "client": "N/A",
     "service": "N/A",
     "year": "2026",
     "heroImages": [
-      "/images/mgt-1-edit.jpg",
-      "/images/mgt-2-editjpg.jpg"
+      "/images/project-mg-hero-a.jpg",
+      "/images/project-mg-hero-b.jpg"
     ],
     "introduction": "This was a template that I used alongside a fake project brief in order to introduce myself to Webflow",
-    "bannerImage": "/images/woman-playing-with-child-2.jpg",
+    "bannerImage": "/images/project-mg-banner.jpg",
     "showcaseImages": [
       {
-        "src": "/images/984a185b-8d7e-4371-9d03-a311f88af20f1.png",
-        "width": 412,
-        "height": 627
+        "src": "/images/project-mg-show-1.jpg",
+        "width": 1600,
+        "height": 1200
       },
       {
-        "src": "/images/services.png",
-        "width": 1536,
-        "height": 1024
+        "src": "/images/project-mg-show-2.jpg",
+        "width": 1600,
+        "height": 1200
       },
       {
-        "src": "/images/woman-playing-with-child-3.png",
-        "width": 1254,
-        "height": 1254
+        "src": "/images/project-mg-show-3.jpg",
+        "width": 1600,
+        "height": 1200
       }
     ],
     "whatIDid": "I transformed an existing physiotherapy Webflow template into a bespoke website for Maple Grove Therapy. I updated the branding, typography, imagery, navigation and written content to create a warm and professional paediatric occupational therapy website. I also redesigned the service, team, testimonial, FAQ and contact sections, introduced custom visual assets, and refined the responsive experience. Throughout the project, I focused on accessibility, clear communication, reusable Webflow components and creating a reassuring experience for parents and professionals."
@@ -123,27 +123,27 @@ export const projects: Project[] = [
     "slug": "cms-filtering-practise",
     "name": "CMS & Filtering (Practise)",
     "category": "prototyping",
-    "thumbnail": "/images/cms-and-filter-practice.jpg",
+    "thumbnail": "/images/project-film-card.jpg",
     "headline": "CMS & Filtering Practise",
     "client": "N/A",
     "service": "N/A",
     "year": "2026",
     "heroImages": [
-      "/images/film-library.jpg",
-      "/images/cms.jpg"
+      "/images/project-film-hero-a.jpg",
+      "/images/project-film-hero-b.jpg"
     ],
     "introduction": "Practising more advanced areas of Webflow",
-    "bannerImage": "/images/film-banner.jpg",
+    "bannerImage": "/images/project-film-banner.jpg",
     "showcaseImages": [
       {
-        "src": "/images/cms.jpg",
-        "width": 2428,
-        "height": 1160
+        "src": "/images/project-film-show-1.jpg",
+        "width": 1600,
+        "height": 1200
       },
       {
-        "src": "/images/film-card.jpg",
-        "width": 320,
-        "height": 565
+        "src": "/images/project-film-show-2.jpg",
+        "width": 1600,
+        "height": 1200
       }
     ],
     "whatIDid": "I used Webflow's built-in CMS to create an easily expandable, modular library of some of my favourite movies, and used Finsweet's Filter to allow the user to sort the films by genre."

@@ -3,12 +3,12 @@ import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 
 const stripImages = [
-  "/images/image151-1-e51f.jpg",
-  "/images/image159-1-e52c.jpg",
-  "/images/image102-1-e4ee.jpg",
-  "/images/image157-1-e528.jpg",
-  "/images/image122-1-e516.jpg",
-  "/images/image117-1-e503.jpg",
+  "/images/work-oakfield-desktop.jpg",
+  "/images/work-oakfield-phones-yellow.jpg",
+  "/images/work-maple-grove-services.jpg",
+  "/images/work-film-library.jpg",
+  "/images/work-oakfield-phones-navy.jpg",
+  "/images/work-maple-grove-faq.jpg",
 ];
 
 /**

@@ -35,7 +35,7 @@ export default function Home() {
           </>
         }
         button={{ href: "https://cal.com/lune-studio/free-website", label: "Apply for a free website", newTab: true }}
-        image="/images/2aqm52pfb.png"
+        image="/images/cta-project-wall.jpg"
       />
       <FeaturedWork />
     </>
