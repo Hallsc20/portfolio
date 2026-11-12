@@ -18,7 +18,7 @@ This site is being **rebuilt in code from the existing Webflow site** (charlie-h
 - **Work** (`/work`): your two newest projects as small cards, "Deep dive into my recent projects", a photo band, then "All my projects" with the category buttons.
 - **Category pages** (`/category/prototyping`, `/category/web-design`): "Prototyping projects", "Web design projects". Only categories with projects get a page and a button.
 - **Project pages** (`/work/oakfield-signs-and-graphics`, `/work/cms-filtering-practise`, `/work/maple-grove-therapy-practise`): headline, Client / Service / Year, two photos, introduction, banner photo, "What I did" with the project's photos, "Want a website like this for your business?" (links to your cal.com booking page), and two of your other projects.
-- **Contact** (`/contact`): "Let's get to work" on the left, the five-question form on the right. **The form isn't connected yet**: it needs a Formspree ID (see "How to Customize").
+- **Contact** (`/contact`): "Let's get to work" on the left, the five-question form on the right. Messages are sent by Formspree (form `mrpqbkal`) to charlie@lune-studio.co.uk.
 - **Page not found**: shown for any address that doesn't exist, in the site's own dark style.
 
 ## Components
@@ -54,6 +54,7 @@ This site is being **rebuilt in code from the existing Webflow site** (charlie-h
 - 2026-11-12: Added the College page (`/college`) about your T Level, and put "College" in the top bar and phone menu. The About page now names the course and links to it.
 - 2026-11-12: Added "From my coursework" to the College page. Your college folder had documents and diagrams but no pictures, so the strongest pieces were redrawn as clean visuals in your own words, shortened to fit (`college-…` pictures in `public/images/`). Nothing private (names, logins) was used.
 - 2026-11-12: Added TechZone Electronics (your group website) to the College page, using the screenshots in your project report. The browser tabs were cropped off because they showed classmates' names, and classmates aren't named on the site. Corrected the gym brief's name to ToKo Fitness. The Precious Primates slides weren't used (animal photos from the web, not your own work) and neither were your marks.
+- 2026-11-12: Connected the Contact form to Formspree. A test message was sent and accepted.
 
 ## Where the Site Lives
 - **Live site:** https://hallsc20.github.io/portfolio/
@@ -67,7 +68,7 @@ This site is being **rebuilt in code from the existing Webflow site** (charlie-h
 - **Fonts:** `app/layout.tsx` loads Plus Jakarta Sans from `app/fonts/`.
 - **To see the system:** open `/style-guide` in the preview.
 - **Projects:** each project's text and photos are in `content/projects.ts`. To add a project, copy one of the two entries and change it (put its photos in `public/images/`). To add a category, add it to `categories` with its projects listed; its button and page appear automatically.
-- **Connect the Contact form:** create a free form at formspree.io that emails charlie@lune-studio.co.uk, then paste its ID into `content/site.ts` (`FORMSPREE_FORM_ID`).
+- **Contact form:** messages go through Formspree (free plan: 50 a month) to the email set up in your Formspree account. The form's ID is in `content/site.ts` (`FORMSPREE_FORM_ID`). To change where messages go, change it in your Formspree account, not in the code.
 - **Which projects show where:** `content/projects.ts`: `homepageProjects` (homepage), `newestProjects` (top of the Work page and "Find another project…"), and each category's `projects` list.
 - **College page coursework:** the two briefs, their descriptions and pictures are listed at the top of `components/college/Coursework.tsx`.
 - **College page:** the course details, languages and topics are lists at the top of `components/college/CollegeContent.tsx`. When you finish PHP, remove `now: true` from it; to add a language, add a line like `{ name: "SQL" },`.
