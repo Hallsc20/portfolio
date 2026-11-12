@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowLink } from "@/components/ui/ArrowLink";
 
 /**
@@ -26,7 +27,11 @@ export function AboutHero() {
               <div className="flex flex-col gap-6 max-md:gap-5">
                 <h2 className="heading-medium tracking-[-0.01rem]">What I&apos;m working on right now</h2>
                 <p className="text-size-regular">
-                  I&apos;m studying Web Development at Leicester College. Alongside my course, I&apos;m a Junior
+                  I&apos;m studying for a T Level in Digital Software Development at Leicester College (
+                  <Link href="/college" className="underline underline-offset-4">
+                    what the course covers
+                  </Link>
+                  ). Alongside my course, I&apos;m a Junior
                   Developer Intern at{" "}
                   <a href="https://www.lune-studio.co.uk" className="underline-offset-4 hover:underline">
                     Lune Studio

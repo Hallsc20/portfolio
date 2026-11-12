@@ -7,6 +7,7 @@ import { MouseFollow } from "@/components/motion/MouseFollow";
 
 const links = [
   { href: "/about", label: "About" },
+  { href: "/college", label: "College" },
   { href: "/work", label: "Work" },
   { href: "/contact", label: "Contact" },
 ];
