@@ -55,6 +55,7 @@ This site is being **rebuilt in code from the existing Webflow site** (charlie-h
 - 2026-11-12: Added "From my coursework" to the College page. Your college folder had documents and diagrams but no pictures, so the strongest pieces were redrawn as clean visuals in your own words, shortened to fit (`college-…` pictures in `public/images/`). Nothing private (names, logins) was used.
 - 2026-11-12: Added TechZone Electronics (your group website) to the College page, using the screenshots in your project report. The browser tabs were cropped off because they showed classmates' names, and classmates aren't named on the site. Corrected the gym brief's name to ToKo Fitness. The Precious Primates slides weren't used (animal photos from the web, not your own work) and neither were your marks.
 - 2026-11-12: Connected the Contact form to Formspree. A test message was sent and accepted.
+- 2026-11-13: Filled the empty space next to the third offer step ("I’m only taking on a small number of free projects") with the Maple Grove Therapy mockup (`offer-limited-spaces.jpg`). The first two steps both show Oakfield, so this adds some variety.
 
 ## Where the Site Lives
 - **Live site:** https://hallsc20.github.io/portfolio/

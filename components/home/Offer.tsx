@@ -55,6 +55,7 @@ const steps: Step[] = [
       </>
     ),
     link: { href: "/contact", label: "Apply for a free website" },
+    image: "/images/offer-limited-spaces.jpg",
   },
 ];
 
